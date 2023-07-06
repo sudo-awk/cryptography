@@ -1,1 +1,28 @@
+#this is my write up for crpytopals challenge 
+
+#challenge 1
+
+Convert hex to base64
+The string:
+
+49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d
+Should produce:
+
+SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t
+
+----------------------------------------------------------------------------------------------
+#!/usr/local/bin/python3
+
+import codecs
+
+str = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
+
+str_2=(codecs.decode(str, 'hex'))#.decode() -- i commented this because it gives error to the next decoding process
+#print(str_2) #this print statement will output a great quote from the decoded string
+
+#print(str_2)
+print(codecs.encode(str_2, 'base64').decode())
+-------------------------------------------------------------------------------------------------
+
+
 
